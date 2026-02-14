@@ -49,6 +49,33 @@
         <img src="one.png" id="img-dice" class="dice-img">
         <button class="btn-roll" onclick="rollDice()">Rolle Dice</button>
     </div>
+    <script>
+        const imgDice = document.getElementById("img-dice");
+
+        function gatDiceFace() {
+            const min = 1;
+            const max = 6;
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function rollDice() {
+            const diceFace = gatDiceFace();
+
+            if (diceFace == 1) {
+                imgDice.src = "one.png";
+            } else if (diceFace == 2) {
+                imgDice.src = "two.png";
+            } else if (diceFace == 3) {
+                imgDice.src = "three.png";
+            } else if (diceFace == 4) {
+                imgDice.src = "four.png";
+            } else if (diceFace == 5) {
+                imgDice.src = "five.png";
+            } else if (diceFace == 6) {
+                imgDice.src = "six.png";
+            }
+        } 
+    </script>
 
 </body>
 
